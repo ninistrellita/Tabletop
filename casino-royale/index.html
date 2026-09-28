@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casino Royale · Pick a Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <h1 class="logo">Casino Royale<small>Pick a card</small></h1>
+  <form id="f">
+    <input id="nm" placeholder="Letter or name" maxlength="18" autocomplete="off" required>
+    <input id="nu" type="number" placeholder="Number" required>
+    <button class="add" type="submit">Add card</button>
+  </form>
+  <div class="head"><h2 class="bebas" style="font-size:1.4rem;color:var(--gold)">Cards <span class="count" id="cnt">0</span></h2><button class="link" id="clr">Clear all</button></div>
+  <ul id="list"></ul>
+  <button id="song">🎵 Load song (Animal)</button>
+  <input id="songFile" type="file" accept="audio/*" hidden>
+  <button id="snd">🔊 Sound: on</button>
+  <button class="deal" id="deal" disabled>Deal / pick a card</button>
+</aside>
+<main>
+  <section class="table">
+    <h2>The table is open</h2>
+    <p class="hint" id="hint">Add at least 2 cards to deal.</p>
+    <div class="deck" id="deck"></div>
+  </section>
+</main>
+<div class="modal" id="modal">
+  <div class="box">
+    <h2>We have a winner!</h2>
+    <div class="who" id="wn"></div>
+    <div class="num" id="wu"></div>
+    <button class="add" id="again">Play again</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
